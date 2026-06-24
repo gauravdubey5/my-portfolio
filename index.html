@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#00f7ff30;
+filter:blur(120px);
+top:-100px;
+left:-100px;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#8b5cf630;
+filter:blur(120px);
+bottom:-100px;
+right:-100px;
+z-index:-1;
+}
+
+nav{
+position:fixed;
+width:100%;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.05);
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#00f7ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00f7ff;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:10px;
+}
+
+.hero-content span{
+color:#00f7ff;
+}
+
+.hero-content p{
+font-size:1.2rem;
+color:#ccc;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 30px;
+background:#00f7ff;
+color:black;
+text-decoration:none;
+font-weight:600;
+border-radius:50px;
+display:inline-block;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:50px;
+color:#00f7ff;
+}
+
+.glass{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:30px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.skill{
+padding:20px;
+text-align:center;
+border-radius:15px;
+background:rgba(255,255,255,.05);
+transition:.3s;
+}
+
+.skill:hover{
+transform:translateY(-10px);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.project{
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,.05);
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-10px);
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#050505;
+color:#aaa;
+}
+
+.socials{
+margin-top:20px;
+}
+
+.socials a{
+color:#00f7ff;
+margin:0 15px;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2.5rem;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav{
+padding:15px 5%;
+}
+
+nav ul{
+gap:15px;
+font-size:14px;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Portfolio</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+
+<h1>Hi, I'm <span>Your Name</span></h1>
+
+<p id="typing"></p>
+
+<a href="#projects" class="btn">View My Work</a>
+
+</div>
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<div class="glass">
+<h3>Who Am I?</h3>
+<br>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Passionate developer who loves building modern web applications.
+</p>
+</div>
+
+<div class="glass">
+<h3>Experience</h3>
+<br>
+<p>
+Frontend Developer, DevOps Engineer, Cloud Enthusiast,
+Open Source Contributor.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">React</div>
+<div class="skill">Docker</div>
+<div class="skill">AWS</div>
+<div class="skill">Azure</div>
+<div class="skill">Kubernetes</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Project One</h3>
+<p>Short project description goes here.</p>
+</div>
+
+<div class="project">
+<h3>Project Two</h3>
+<p>Short project description goes here.</p>
+</div>
+
+<div class="project">
+<h3>Project Three</h3>
+<p>Short project description goes here.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="glass contact">
+
+<h3>Let's Build Something Amazing 🚀</h3>
+
+<br>
+
+<p>Email : yourmail@example.com</p>
+
+<div class="socials">
+<a href="#">GitHub</a>
+<a href="#">LinkedIn</a>
+<a href="#">Twitter</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Your Name | All Rights Reserved
+</footer>
+
+<script>
+
+const text = [
+"Frontend Developer",
+"DevOps Engineer",
+"Cloud Enthusiast",
+"Open Source Contributor"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+
+if(count === text.length){
+count = 0;
+}
+
+currentText = text[count];
+letter = currentText.slice(0, ++index);
+
+document.getElementById("typing").textContent = letter;
+
+if(letter.length === currentText.length){
+
+count++;
+index = 0;
+
+setTimeout(type,1500);
+
+}else{
+setTimeout(type,100);
+}
+
+})();
+
+</script>
+
+</body>
+</html> 
